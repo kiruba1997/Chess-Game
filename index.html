@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess - Play vs AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Chess - Play vs AI</h1>
+      <div class="game-info">
+        <div class="status" id="game-status">White to move</div>
+        <div class="player-indicator">
+          <span id="current-player">⚪ White</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <div class="board-container">
+        <div id="chess-board" class="chess-board"></div>
+        <div class="captured-pieces">
+          <div class="captured-section">
+            <h3>Captured by AI</h3>
+            <div id="captured-black" class="captured-list"></div>
+          </div>
+          <div class="captured-section">
+            <h3>Captured by You</h3>
+            <div id="captured-white" class="captured-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="controls">
+          <button id="new-game" class="btn btn-primary">New Game</button>
+          <button id="undo-move" class="btn btn-secondary">Undo Move</button>
+          <button id="hint-move" class="btn btn-secondary">Hint</button>
+        </div>
+
+        <div class="move-history">
+          <h3>Move History</h3>
+          <div id="move-list" class="move-list"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="js/chess-engine.js"></script>
+  <script src="js/chess-ai.js"></script>
+  <script src="js/chess-ui.js"></script>
+</body>
+</html>
+
